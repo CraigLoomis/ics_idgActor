@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-import actorcore.Actor
+import actorcore.ICC
 
-class OurActor(actorcore.Actor.Actor):
+class OurActor(actorcore.ICC.ICC):
     def __init__(self, name,
                  productName=None, configFile=None,
                  modelNames=(),
@@ -12,12 +12,14 @@ class OurActor(actorcore.Actor.Actor):
         
         # This sets up the connections to/from the hub, the logger, and the twisted reactor.
         #
-        actorcore.Actor.Actor.__init__(self, name, 
-                                       productName=productName, 
-                                       configFile=configFile,
-                                       modelNames=modelNames)
-
-        # At this
+        actorcore.ICC.ICC.__init__(self, name, 
+                                   productName=productName, 
+                                   configFile=configFile,
+                                   modelNames=modelNames)
+        
+    @property
+    def labpc(self):
+        return self.controllers['labpc']
 
 #
 # To work
