@@ -18,12 +18,33 @@ class TopCmd(object):
         self.vocab = [
             ('ping', '', self.ping),
             ('status', '', self.status),
+            ('connect', '', self.connect),
         ]
 
         # Define typed command arguments for the above commands.
         self.keys = keys.KeysDictionary("mcs_mcs", (1, 1),
                                         )
+    def controllerKey(self):
+        controllerNames = self.actor.controllers.keys()
+        key = 'controllers=%s' % (','.join([c for c in controllerNames]))
 
+        return key
+    
+    def connect(self, cmd, doFinish=True):
+        """ Reload all controller objects. """
+
+        controller = 'labpc'
+        instanceName = None
+        try:
+            self.actor.attachController(controller,
+                                        instanceName=instanceName)
+        except Exception as e:
+                cmd.fail('text="failed to connect controller %s: %s"' % (instanceName,
+                                                                         e))
+                return
+
+        cmd.finish(self.controllerKey())
+        
 
     def ping(self, cmd):
         """Query the actor for liveness/happiness."""

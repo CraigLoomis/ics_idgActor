@@ -12,7 +12,7 @@ class labpc(object):
         self.conn = None
 
         self.EOL = '\n'
-        self.timeout = 5
+        self.timeout = 15
         
     def start(self):
         pass

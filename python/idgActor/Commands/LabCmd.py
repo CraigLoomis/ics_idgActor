@@ -16,7 +16,7 @@ class LabCmd(object):
         # passed a single argument, the parsed and typed command.
         #
         self.vocab = [
-            ('raw', '@raw', self.raw),
+            ('lab', '@raw', self.raw),
         ]
 
         # Define typed command arguments for the above commands.
