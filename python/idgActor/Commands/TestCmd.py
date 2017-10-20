@@ -19,7 +19,7 @@ class TestCmd(object):
         #
         self.vocab = [
             ('motors', 'checkRepeats <cam> [<reps>] [<axis>] [<distance>] [<delay>]', self.checkRepeats),
-            ('motors', 'findRange <cam> [<axis>]', self.findRange),
+            ('motors', 'findRange <cam> [<current>] [<axis>]', self.findRange),
         ]
 
         # Define typed command arguments for the above commands.
@@ -34,6 +34,8 @@ class TestCmd(object):
                                                  help='delay between repetitions'),
                                         keys.Key("distance", types.Int(), default=300,
                                                  help='how far to move'),
+                                        keys.Key("current", types.Int(),
+                                                 help='motor current override'),
                                         
                                         )
 
@@ -150,6 +152,7 @@ class TestCmd(object):
 
         keys = cmd.cmd.keywords
         cam = keys['cam'].values[0]
+        current = keys['current'].values[0] if 'current' in keys else None
         actor = 'xcu_%s' % (cam)
         axes = 'a','b','c'
         
@@ -158,8 +161,11 @@ class TestCmd(object):
         
         self.safeCmd(cmd, actor, "motors init", timeLim=5)
 
-        ret = self.safeCmd(cmd, actor, "motors home", timeLim=60)
-        time.sleep(1)        
+        if current is not None:
+            cmd.warn('test="overriding current to %d percent."' % (current))
+            for ax_i, ax in enumerate(axes):
+                self.safeCmd(cmd, actor, 'motors raw=aM%dm%dR' % (ax_i+1, current))
+                
         self.safeCmd(cmd, actor, "motors move piston=%d" % (farDist), timeLim=30)
         ret = self.grabPositions(cmd, actor, 'tooFar')
         if not all(ret[-1]):
