@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from builtins import object
 import opscore.protocols.keys as keys
 import opscore.protocols.types as types
 from opscore.utility.qstr import qstr
@@ -25,7 +26,7 @@ class TopCmd(object):
         self.keys = keys.KeysDictionary("mcs_mcs", (1, 1),
                                         )
     def controllerKey(self):
-        controllerNames = self.actor.controllers.keys()
+        controllerNames = list(self.actor.controllers.keys())
         key = 'controllers=%s' % (','.join([c for c in controllerNames]))
 
         return key

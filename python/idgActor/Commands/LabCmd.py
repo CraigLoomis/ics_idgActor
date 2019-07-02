@@ -29,7 +29,7 @@ class LabCmd(object):
 
         try:
             dev = self.actor.labpc
-        except Exception, e:
+        except Exception as e:
             cmd.fail('text="not connected! (%s)"' % (e))
             return
 
