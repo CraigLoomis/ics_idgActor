@@ -70,10 +70,11 @@ class KeithleyCmd(object):
             cmd.fail('text="not connected! (%s)"' % (e))
             return
 
-        cmdList = ['SENS1:CURR:NPLC 1',
+        cmdList = ['*RST',
+                   'SENS1:CURR:NPLC 1',
                    'SYST:AZER ON',
-                   'SOUR1:GCON OFF',
-                   'SOUR2:GCON OFF',
+                   'SOUR1:GCON ON',
+                   'SOUR2:GCON ON',
                    'SOUR1:VOLT:MODE FIX',
                    'SOUR2:VOLT:MODE FIX',
                    'SOUR1:VOLT:RANG 10',
@@ -83,8 +84,7 @@ class KeithleyCmd(object):
                    'OUTP1 OFF',
                    'OUTP2 OFF',
                    'SENS1:CURR:RANG:AUTO ON',
-                   'SENS2:CURR:RANG:AUTO ON',
-                   'CALC5:FORM C4C3']
+                   'SENS2:CURR:RANG:AUTO ON']
 
         for c in cmdList:
             dev.sendOneCommand(c, cmd=cmd, noResponse=True)
