@@ -81,8 +81,8 @@ class KeithleyCmd(object):
                    'SOUR2:VOLT:RANG 10',
                    'SOUR1:VOLT 0',
                    'SOUR2:VOLT 0',
-                   'OUTP1 OFF',
-                   'OUTP2 OFF',
+                   'OUTP1 ON',
+                   'OUTP2 ON',
                    'SENS1:CURR:RANG:AUTO ON',
                    'SENS2:CURR:RANG:AUTO ON']
 
