@@ -7,6 +7,7 @@ import socket
 from ics.utils.tcp import bufferedSocket
 
 class keithley(object):
+    EOL = '\r'
     def __init__(self, actor, name, logLevel=logging.DEBUG):
         self.name = name
         self.actor = actor
@@ -18,7 +19,7 @@ class keithley(object):
         parts = parts.split(':')
         self.address = (parts[0], int(parts[1]))
         self.conn = None
-        self.io = bufferedSocket.BufferedSocket(self.name+"IO", EOL='\r')
+        self.io = bufferedSocket.BufferedSocket(self.name+"IO", EOL=self.EOL)
         self.EOL = '\n'
         self.timeout = 5
 
@@ -45,16 +46,7 @@ class keithley(object):
             #                           line_buffering=True)
         return self.conn
 
-    def XXreadOneLine(self, conn, cmd=None):
-        buf = []
-        while True:
-            c = conn.read(1)
-            cmd.debug(f'text="read: {c}"')
-            buf = buf + c
-            if c in '\r\n':
-                return buf
-
-    def sendOneCommand(self, cmdStr, cmd=None, noResponse=False):
+    def sendOneCommand(self, cmdStr, cmd=None, timeout=10, noResponse=False):
         conn = self._connect()
 
         if cmd is not None:
@@ -64,9 +56,7 @@ class keithley(object):
         if noResponse:
             return None
 
-        # conn.flush()
-        ret = self.io.getOneResponse(sock=conn, timeout=2, cmd=cmd)
-        # ret = conn.readline()
+        ret = self.io.getOneResponse(sock=conn, timeout=timeout, cmd=cmd)
         ret = ret.strip()
         if cmd is not None:
             cmd.debug(f'text="received {ret}"')
