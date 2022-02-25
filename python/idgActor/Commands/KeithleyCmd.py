@@ -36,13 +36,15 @@ class KeithleyCmd(object):
                                         keys.Key("power", types.Float(),
                                                  help='LED power'),
                                         keys.Key("nread", types.Int(),
-                                                 help='number of readings'),
+                                                 help='number of internal readings'),
                                         keys.Key("name", types.String(),
                                                  help='experiment name '),
                                         keys.Key("note", types.String(),
                                                  help='channel number, '),
 
                                         )
+
+        self.ledIds = {940:1, 1050:2, 1200:3, 1300:4}
 
     @property
     def keithley(self):
@@ -107,20 +109,30 @@ class KeithleyCmd(object):
         cmd.finish()
 
     def n8pds(self, cmd):
+        """Take and store a """
         cmdKeys = cmd.cmd.keywords
         wave = cmdKeys['wave'].values[0] if 'wave' in cmdKeys else -9999
         power = cmdKeys['power'].values[0] if 'power' in cmdKeys else -9999
-        nread = cmdKeys['nread'].values[0]  if 'nread' in cmdKeys else 7
+        nread = cmdKeys['nread'].values[0]  if 'nread' in cmdKeys else 9
         name = cmdKeys['name'].values[0]
         note = cmdKeys['note'].values[0] if 'note' in cmdKeys else ''
         note = note.replace(' ', '_')
 
-        ledmap = {}
         dfRows = []
-        chans = [1,2]
-        for c in chans:
-            meas = self.current(c, cmd=cmd, number_keithley_reads=nread)
-            ts = time.strftime("%Y-%m-%dT%H:%M:%S")
+        meas = self.allCurrents(cmd=cmd, number_keithley_reads=nread)
+        ts = time.strftime("%Y-%m-%dT%H:%M:%S")
+        for c in range(2):
+            cmd.inform(f'text="chan {c+1}: {np.median(meas[:,c])}"')
+        for m_i, m in enumerate(meas):
+            dfRows.append(dict(ts=ts, name=name, wavelength=wave, power=power,
+                                reading=m_i, chan1=m[0], chan2=m[1],
+                                note=note))
+        df = pd.DataFrame(dfRows)
+        fname = f'/data/pfseng/n8_photodiode/pdmeas2_{name}_{ts}.txt'
+        with open(fname, 'at') as f:
+            f.write(df.to_string() + '\n')
+        cmd.finish(f'text="wrote {fname}"')
+
             cmd.inform(f'text="chan {c}: {np.median(np.array(meas))} {meas}"')
             for m_i, m in enumerate(meas):
                 dfRows.append(dict(ts=ts, name=name, chan=c, wavelength=wave, power=power,
@@ -142,14 +154,16 @@ class KeithleyCmd(object):
         cmds = ('TRAC:POIN %2i' % number_keithley_reads,
                 'TRAC:FEED:CONT NEXT',
                 'TRIG:COUN %2i' % number_keithley_reads,
-                'FORM:ELEM:TRAC CURR%s' % str(current_number),
+                'FORM:ELEM:TRAC CURR1,CURR2',
                 'INIT')
         for c in cmds:
             ret = dev.sendOneCommand(c, cmd=cmd, noResponse=True)
 
         readCmd = 'TRACE:DATA?'
         ret = dev.sendOneCommand(readCmd, cmd=cmd)
-        data_current_split = tuple(map(float, ret.split(',')))
+
+        rawArray = np.fromstring(ret, sep=',')
+        data_current_split = rawArray.reshape(number_keithley_reads, 2)
 
         return data_current_split
 
