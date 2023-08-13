@@ -24,6 +24,9 @@ class KeithleyCmd(object):
             ('current', '@raw', self.raw),
             ('current', 'read [<chan>] [<nread>]', self.read),
             ('current', 'init', self.init),
+            ('current2', '@raw', self.raw2),
+            ('current2', 'init', self.init2),
+            # ('current', '@(one|two)'), self.defKeithleys),
             ('n8pds', 'meas <name> [<wave>] [<power>] [<nread>] [<note>]', self.n8pds)
         ]
 
@@ -49,20 +52,83 @@ class KeithleyCmd(object):
     @property
     def keithley(self):
         return self.actor.controllers['keithley']
+    @property
+    def keithley2(self):
+        return self.actor.controllers['keithley2']
+
+    def device(self, channel):
+        if channel == 1:
+            return self.keithley
+        elif channel == 2:
+            return self.keithley2
+        else:
+            raise ValueError(f"invalid channel: {channel}")
+
+    def _raw(self, cmd, channel):
+        """Report camera status and actor version. """
+
+        try:
+            dev = self.device(channel)
+        except Exception as e:
+            cmd.fail('text="not connected! (%s)"' % (e))
+            return
+        cmd.inform(f'text="dev={dev} {dev.sendOneCommand}"')
+        ret = dev.sendOneCommand(cmdStr=cmd.cmd.keywords['raw'].values[0],
+                                 cmd=cmd)
+
+        cmd.inform('text="returned %s"' % (ret))
+        cmd.finish()
 
     def raw(self, cmd):
         """Report camera status and actor version. """
 
-        try:
-            dev = self.keithley
-        except Exception as e:
-            cmd.fail('text="not connected! (%s)"' % (e))
-            return
+        self._raw(cmd, channel=1)
 
-        ret = dev.sendOneCommand(cmd.cmd.keywords['raw'].values[0],
-                                 cmd=cmd)
+    def raw2(self, cmd):
+        """Report camera status and actor version. """
 
-        cmd.inform('text="returned %s"' % (ret))
+        self._raw(cmd, channel=2)
+
+    def _init(self, cmd, dev, channel=None):
+        cmdList = ['*RST',
+                   'SENS1:CURR:NPLC 1',
+                   'SYST:AZER OFF']
+
+        if channel is None:
+            cmdList.extend(
+                    ['SOUR1:GCON ON',
+                     'SOUR2:GCON ON',
+                     'SOUR1:VOLT:MODE FIX',
+                     'SOUR2:VOLT:MODE FIX',
+                     'SOUR1:VOLT:RANG 10',
+                     'SOUR2:VOLT:RANG 10',
+                     'SOUR1:VOLT 0',
+                     'SOUR2:VOLT 0',
+                     'OUTP1 OFF',
+                     'OUTP2 OFF',
+                     'SENS1:CURR:RANG:AUTO ON',
+                     'SENS2:CURR:RANG:AUTO ON'])
+
+        elif channel == 1:
+            cmdList.extend(
+                    ['SOUR1:GCON ON',
+                     'SOUR1:VOLT:MODE FIX',
+                     'SOUR1:VOLT:RANG 10',
+                     'SOUR1:VOLT 0',
+                     'OUTP1 OFF',
+                     'SENS1:CURR:RANG:AUTO ON'])
+        else:
+            cmdList.extend(
+                    ['SYST:ZCH OFF',
+                     'SYST:ZCOR OFF',
+                     'SOUR1:VOLT:MODE FIX',
+                     'SOUR1:VOLT:RANG 10',
+                     'SOUR1:VOLT 0',
+                     'OUTP1 OFF',
+                    'SENS1:CURR:RANG:AUTO ON'])
+
+        for c in cmdList:
+            dev.sendOneCommand(c, cmd=cmd, noResponse=True)
         cmd.finish()
 
     def init(self, cmd):
@@ -71,28 +137,25 @@ class KeithleyCmd(object):
         except Exception as e:
             cmd.fail('text="not connected! (%s)"' % (e))
             return
+        self._init(cmd, dev)
 
-        cmdList = ['*RST',
-                   'SENS1:CURR:NPLC 1',
-                   'SYST:AZER ON',
-                   'SOUR1:GCON ON',
-                   'SOUR2:GCON ON',
-                   'SOUR1:VOLT:MODE FIX',
-                   'SOUR2:VOLT:MODE FIX',
-                   'SOUR1:VOLT:RANG 10',
-                   'SOUR2:VOLT:RANG 10',
-                   'SOUR1:VOLT 0',
-                   'SOUR2:VOLT 0',
-                   'OUTP1 ON',
-                   'OUTP2 ON',
-                   'SENS1:CURR:RANG:AUTO ON',
-                   'SENS2:CURR:RANG:AUTO ON']
+    def init2(self, cmd):
+        try:
+            dev = self.keithley2
+        except Exception as e:
+            cmd.fail('text="not connected! (%s)"' % (e))
+            return
+        self._init(cmd, dev, channel=2)
 
-        for c in cmdList:
-            dev.sendOneCommand(c, cmd=cmd, noResponse=True)
-        cmd.finish()
+    def _read(self, cmd, channel):
+        """Take a single reading. """
+        cmdKeys = cmd.cmd.keywords
+
+        meas = self.current(channel=channel, cmd=cmd)
+        cmd.inform(f'text="chan {channel}: {meas}"')
 
     def read(self, cmd):
+        """Take a single reading. """
         cmdKeys = cmd.cmd.keywords
         if 'chan' in cmdKeys:
             chan = int(cmdKeys['chan'].values[0])
@@ -103,9 +166,8 @@ class KeithleyCmd(object):
         else:
             chans = [1,2]
 
-        for c in chans:
-            meas = self.current(c, cmd=cmd)
-            cmd.inform(f'text="chan {c}: {meas}"')
+        for chan in chans:
+            self._read(cmd, channel=chan)
         cmd.finish()
 
     def n8pds(self, cmd):
@@ -133,18 +195,106 @@ class KeithleyCmd(object):
             f.write(df.to_string() + '\n')
         cmd.finish(f'text="wrote {fname}"')
 
-            cmd.inform(f'text="chan {c}: {np.median(np.array(meas))} {meas}"')
-            for m_i, m in enumerate(meas):
-                dfRows.append(dict(ts=ts, name=name, chan=c, wavelength=wave, power=power,
-                                   reading=m_i, value=m,
-                                   note=note))
+    def n8pds2(self, cmd):
+        """Take and store a """
+        cmdKeys = cmd.cmd.keywords
+        wave = cmdKeys['wave'].values[0] if 'wave' in cmdKeys else -9999
+        power = cmdKeys['power'].values[0] if 'power' in cmdKeys else -9999
+        nread = cmdKeys['nread'].values[0] if 'nread' in cmdKeys else 9
+        name = cmdKeys['name'].values[0]
+        note = cmdKeys['note'].values[0] if 'note' in cmdKeys else ''
+        note = note.replace(' ', '_')
+
+        self.fireBoth(number_keithey_reads=nread, cmd=cmd)
+
+        meas1 = self.readOne(1, cmd=cmd)
+        meas2 = self.readOne(2, cmd=cmd)
+        meas = np.stack([meas1, meas2], axis=1)
+        ts = time.strftime("%Y-%m-%dT%H:%M:%S")
+        for c in range(2):
+            cmd.inform(f'text="chan {c+1}: {np.median(meas[:,c])}"')
+
+        dfRows = []
+        for m_i, m in enumerate(meas):
+            dfRows.append(dict(ts=ts, name=name, wavelength=wave, power=power,
+                               reading=m_i, chan1=m[0], chan2=m[1],
+                               note=note))
         df = pd.DataFrame(dfRows)
-        fname = f'/data/pfseng/n8_photodiode/pdmeas_{name}_{ts}.txt'
+        fname = f'/data/pfseng/n8_photodiode/pdmeas2_{name}_{ts}.txt'
         with open(fname, 'at') as f:
             f.write(df.to_string() + '\n')
         cmd.finish(f'text="wrote {fname}"')
 
-    def current(self, current_number=1, number_keithley_reads=7, cmd=None):
+    def fireOne(self, channel, number_keithley_reads=7, cmd=None):
+        try:
+            dev = self.device(channel)
+        except Exception as e:
+            cmd.fail('text="not connected! (%s)"' % (e))
+            return
+
+        if channel == 1:
+            FORMcmd = 'FORM:ELEM:TRAC CURR%s' % str(channel)
+        else:
+            FORMcmd = 'FORM:ELEM READ'
+
+        cmds = ('TRAC:POIN %2i' % number_keithley_reads,
+                'TRAC:FEED:CONT NEXT',
+                'TRIG:COUN %2i' % number_keithley_reads,
+                FORMcmd,
+                'INIT')
+
+        for c in cmds:
+            ret = dev.sendOneCommand(cmdStr=c, cmd=cmd, noResponse=True)
+
+    def readOne(self, channel, cmd=None):
+        try:
+            dev = self.device(channel)
+        except Exception as e:
+            cmd.fail('text="not connected! (%s)"' % (e))
+            return
+
+        readCmd = 'TRACE:DATA?'
+        ret = dev.sendOneCommand(cmdStr=readCmd, cmd=cmd)
+        rawArray = np.fromstring(ret, sep=',')
+        data_current_split = rawArray
+
+        return data_current_split
+
+    def fireBoth(self, number_keithey_reads=7, cmd=None):
+        for chan in 1,2:
+            self.fireOne(chan, number_keithley_reads=number_keithey_reads, cmd=cmd)
+
+    def current(self, channel, current_number=1, number_keithley_reads=7, cmd=None):
+        try:
+            dev = self.device(channel)
+        except Exception as e:
+            cmd.fail('text="not connected! (%s)"' % (e))
+            return
+
+        if channel == 1:
+            FORMcmd = 'FORM:ELEM:TRAC CURR%s' % str(current_number)
+        else:
+            FORMcmd = 'FORM:ELEM READ'
+
+        cmds = ('TRAC:POIN %2i' % number_keithley_reads,
+                'TRAC:FEED:CONT NEXT',
+                'TRIG:COUN %2i' % number_keithley_reads,
+                FORMcmd,
+                'INIT')
+
+        for c in cmds:
+            ret = dev.sendOneCommand(cmdStr=c, cmd=cmd, noResponse=True)
+
+        readCmd = 'TRACE:DATA?'
+        ret = dev.sendOneCommand(cmdStr=readCmd, cmd=cmd)
+        data_current_split = tuple(map(float, ret.split(',')))
+
+        rawArray = np.fromstring(ret, sep=',')
+        data_current_split = rawArray
+
+        return data_current_split
+
+    def allCurrents(self, number_keithley_reads=7, cmd=None):
         try:
             dev = self.keithley
         except Exception as e:
