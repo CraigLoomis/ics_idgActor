@@ -1,0 +1,8 @@
+args: name=n8faint_2_940_960 wave=940 led=1 power=960 nread=100 ngroups=80 ndarks=80 note=n8faint_2
+2022-03-04 21:21:04.490Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-05T02:21:04.511 sent idg n8pds meas name=n8faint_2_940_960_predark wave=940 power=0 nread=100 note='n8faint_2' (from cloomis_tron)
+2022-03-05T02:21:08.865 idg i text="chan 1: 2.096101e-13"
+2022-03-05T02:21:08.866 idg i text="chan 2: -1.424638e-12"
+2022-03-05T02:21:08.884 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_n8faint_2_940_960_predark_2022-03-04T21:21:08.txt"
+on 1 960 Namespace(off=False, on=[1, 960], status=False)
+OK 1 1 960

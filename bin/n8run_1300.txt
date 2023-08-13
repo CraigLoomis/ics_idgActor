@@ -1,0 +1,548 @@
+nohup: ignoring input
+2022-03-04 13:07:13.510Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:07:13.533 sent hx_n8 ramp nread=20 exptype=flat objname=h4run_1300_1_led1300 (from cloomis_tron)
+2022-03-04T18:07:13.554 hx_n8 w text="rowSequence NO override: (48958, 4696, 8774, 10, 4096) vs [8192 4096]"
+2022-03-04T18:07:13.576 hx_n8 i text="lamp 0=0"
+2022-03-04T18:07:13.580 hx_n8 i text="configuring ramp..."
+2022-03-04T18:07:13.582 hx_n8 i ramp=1,1,1,20,0
+2022-03-04T18:07:16.713 hx_n8 i text="cb ramp=0 group=0 read=0 image=False outputReset=True"
+2022-03-04T18:07:16.713 hx_n8 i text="DAQ output start"
+2022-03-04T18:07:16.719 hx_n8 i readtimes=1646417236.713,1646417247.570,10.857
+2022-03-04T18:07:27.889 hx_n8 i text="cb ramp=1 group=0 read=1 image=True outputReset=True"
+2022-03-04T18:07:27.890 hx_n8 i text="creating FITS files at group=0 read=1"
+2022-03-04T18:07:28.113 hx_n8 i text="created /data/ramps/2022-03-04/PFJB04755183.fits"
+2022-03-04T18:07:28.742 hx_n8 i text="adding to ramp FITS file at group=0 read=1 reset=True shape=(4096, 4096) ref=(4096, 4096), med=12697.0"
+2022-03-04T18:07:29.793 hx_n8 i hxread=47551,1,0,1
+2022-03-04T18:07:38.863 hx_n8 i text="cb ramp=1 group=1 read=1 image=True outputReset=True"
+2022-03-04T18:07:39.467 hx_n8 i text="adding to ramp FITS file at group=1 read=1 reset=False shape=(4096, 4096) ref=(4096, 4096), med=12751.0"
+2022-03-04T18:07:40.512 hx_n8 i hxread=47551,1,1,1
+args: name=h4run_1300_1_1300_950 wave=1300 led=4 power=950 nread=100 ngroups=30 ndarks=30 note=h4run_1300_1
+2022-03-04 13:07:43.521Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:07:43.545 sent idg n8pds meas name=h4run_1300_1_1300_950_predark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:07:47.898 idg i text="chan 1: 2.1671555000000002e-13"
+2022-03-04T18:07:47.899 idg i text="chan 2: -2.8990145e-12"
+2022-03-04T18:07:47.920 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_predark_2022-03-04T13:07:47.txt"
+on 4 950 Namespace(off=False, on=[4, 950], status=False)
+OK 1 4 950
+2022-03-04 13:07:49.827Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:07:49.832 hx_n8 i text="cb ramp=1 group=1 read=2 image=True outputReset=True"
+2022-03-04T18:07:50.356 hx_n8 i text="adding to ramp FITS file at group=1 read=2 reset=False shape=(4096, 4096) ref=(4096, 4096), med=12805.0"
+2022-03-04T18:07:49.849 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:07:54.235 idg i text="chan 1: 2.23821e-13"
+2022-03-04T18:07:54.236 idg i text="chan 2: -2.336032e-09"
+2022-03-04T18:07:54.257 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:07:54.txt"
+2022-03-04 13:07:54.931Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:07:55.149 hx_n8 i hxread=47551,1,1,2
+2022-03-04T18:07:54.952 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:07:59.263 idg i text="chan 1: 2.264855e-13"
+2022-03-04T18:07:59.264 idg i text="chan 2: -2.367926e-09"
+2022-03-04T18:07:59.283 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:07:59.txt"
+2022-03-04 13:07:59.959Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:08:00.704 hx_n8 i text="cb ramp=1 group=1 read=3 image=True outputReset=True"
+2022-03-04T18:08:01.264 hx_n8 i text="adding to ramp FITS file at group=1 read=3 reset=False shape=(4096, 4096) ref=(4096, 4096), med=15279.0"
+2022-03-04T18:08:02.306 hx_n8 i hxread=47551,1,1,3
+2022-03-04T18:07:59.981 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:08:04.291 idg i text="chan 1: 2.149392e-13"
+2022-03-04T18:08:04.292 idg i text="chan 2: -2.380812e-09"
+2022-03-04T18:08:04.311 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:08:04.txt"
+2022-03-04 13:08:04.988Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:08:05.010 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:08:09.317 idg i text="chan 1: 2.104983e-13"
+2022-03-04T18:08:09.318 idg i text="chan 2: -2.3987475000000003e-09"
+2022-03-04T18:08:09.343 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:08:09.txt"
+2022-03-04 13:08:10.031Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:08:11.716 hx_n8 i text="cb ramp=1 group=1 read=4 image=True outputReset=True"
+2022-03-04T18:08:12.247 hx_n8 i text="adding to ramp FITS file at group=1 read=4 reset=False shape=(4096, 4096) ref=(4096, 4096), med=19394.0"
+2022-03-04T18:08:13.294 hx_n8 i hxread=47551,1,1,4
+2022-03-04T18:08:10.052 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:08:14.363 idg i text="chan 1: 2.1760370000000002e-13"
+2022-03-04T18:08:14.364 idg i text="chan 2: -2.4049865e-09"
+2022-03-04T18:08:14.384 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:08:14.txt"
+2022-03-04 13:08:15.063Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:08:15.084 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:08:19.392 idg i text="chan 1: 2.23821e-13"
+2022-03-04T18:08:19.393 idg i text="chan 2: -2.4166055000000002e-09"
+2022-03-04T18:08:19.415 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:08:19.txt"
+2022-03-04 13:08:20.101Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:08:22.575 hx_n8 i text="cb ramp=1 group=1 read=5 image=True outputReset=True"
+2022-03-04T18:08:23.211 hx_n8 i text="adding to ramp FITS file at group=1 read=5 reset=False shape=(4096, 4096) ref=(4096, 4096), med=23468.0"
+2022-03-04T18:08:20.123 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:08:24.435 idg i text="chan 1: 2.1582735e-13"
+2022-03-04T18:08:24.436 idg i text="chan 2: -2.4231105e-09"
+2022-03-04T18:08:24.455 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:08:24.txt"
+2022-03-04 13:08:25.131Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:08:25.153 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:08:29.464 idg i text="chan 1: 2.184919e-13"
+2022-03-04T18:08:29.465 idg i text="chan 2: -2.4270575e-09"
+2022-03-04T18:08:29.485 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:08:29.txt"
+2022-03-04 13:08:30.167Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:08:33.611 hx_n8 i text="cb ramp=1 group=1 read=6 image=True outputReset=True"
+2022-03-04T18:08:34.435 hx_n8 i text="adding to ramp FITS file at group=1 read=6 reset=False shape=(4096, 4096) ref=(4096, 4096), med=27462.0"
+2022-03-04T18:08:30.188 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:08:34.498 idg i text="chan 1: 2.1227465000000002e-13"
+2022-03-04T18:08:34.500 idg i text="chan 2: -2.433268e-09"
+2022-03-04T18:08:34.520 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:08:34.txt"
+2022-03-04 13:08:35.195Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:08:35.335 hx_n8 i hxread=47551,1,1,5
+2022-03-04T18:08:37.163 hx_n8 i hxread=47551,1,1,6
+2022-03-04T18:08:35.217 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:08:39.523 idg i text="chan 1: 2.2026825e-13"
+2022-03-04T18:08:39.525 idg i text="chan 2: -2.4341789999999996e-09"
+2022-03-04T18:08:39.543 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:08:39.txt"
+2022-03-04 13:08:40.219Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:08:44.476 hx_n8 i text="cb ramp=1 group=1 read=7 image=True outputReset=True"
+2022-03-04T18:08:40.240 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:08:44.549 idg i text="chan 1: 2.184919e-13"
+2022-03-04T18:08:44.551 idg i text="chan 2: -2.4460755e-09"
+2022-03-04T18:08:44.573 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:08:44.txt"
+2022-03-04T18:08:45.076 hx_n8 i text="adding to ramp FITS file at group=1 read=7 reset=False shape=(4096, 4096) ref=(4096, 4096), med=31343.0"
+2022-03-04 13:08:45.247Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:08:46.118 hx_n8 i hxread=47551,1,1,7
+2022-03-04T18:08:45.269 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:08:49.577 idg i text="chan 1: 2.273737e-13"
+2022-03-04T18:08:49.579 idg i text="chan 2: -2.4457045e-09"
+2022-03-04T18:08:49.599 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:08:49.txt"
+2022-03-04 13:08:50.280Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:08:50.301 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:08:54.610 idg i text="chan 1: 2.255973e-13"
+2022-03-04T18:08:54.613 idg i text="chan 2: -2.455424e-09"
+2022-03-04T18:08:54.633 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:08:54.txt"
+2022-03-04 13:08:55.312Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:08:55.470 hx_n8 i text="cb ramp=1 group=1 read=8 image=True outputReset=True"
+2022-03-04T18:08:56.103 hx_n8 i text="adding to ramp FITS file at group=1 read=8 reset=False shape=(4096, 4096) ref=(4096, 4096), med=35051.0"
+2022-03-04T18:08:55.334 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:08:59.642 idg i text="chan 1: 2.2026825e-13"
+2022-03-04T18:08:59.645 idg i text="chan 2: -2.455444e-09"
+2022-03-04T18:08:59.666 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:08:59.txt"
+2022-03-04 13:09:00.343Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:09:00.365 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:09:04.675 idg i text="chan 1: 2.273737e-13"
+2022-03-04T18:09:04.676 idg i text="chan 2: -2.459252e-09"
+2022-03-04T18:09:04.695 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:09:04.txt"
+2022-03-04 13:09:05.382Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:09:06.390 hx_n8 i text="cb ramp=1 group=1 read=9 image=True outputReset=True"
+2022-03-04T18:09:07.034 hx_n8 i text="adding to ramp FITS file at group=1 read=9 reset=False shape=(4096, 4096) ref=(4096, 4096), med=38434.0"
+2022-03-04T18:09:05.404 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:09:09.710 idg i text="chan 1: 2.273737e-13"
+2022-03-04T18:09:09.713 idg i text="chan 2: -2.460888e-09"
+2022-03-04T18:09:09.734 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:09:09.txt"
+2022-03-04 13:09:10.416Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:09:10.979 hx_n8 i hxread=47551,1,1,8
+2022-03-04T18:09:12.789 hx_n8 i hxread=47551,1,1,9
+2022-03-04T18:09:10.437 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:09:14.745 idg i text="chan 1: 2.2026825e-13"
+2022-03-04T18:09:14.746 idg i text="chan 2: -2.4616790000000002e-09"
+2022-03-04T18:09:14.769 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:09:14.txt"
+2022-03-04 13:09:15.443Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:09:17.279 hx_n8 i text="cb ramp=1 group=1 read=10 image=True outputReset=True"
+2022-03-04T18:09:17.980 hx_n8 i text="adding to ramp FITS file at group=1 read=10 reset=False shape=(4096, 4096) ref=(4096, 4096), med=41400.0"
+2022-03-04T18:09:19.137 hx_n8 i hxread=47551,1,1,10
+2022-03-04T18:09:15.465 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:09:19.773 idg i text="chan 1: 2.1582735e-13"
+2022-03-04T18:09:19.774 idg i text="chan 2: -2.469422e-09"
+2022-03-04T18:09:19.795 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:09:19.txt"
+2022-03-04 13:09:20.473Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:09:20.494 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:09:24.801 idg i text="chan 1: 2.255973e-13"
+2022-03-04T18:09:24.803 idg i text="chan 2: -2.4754954999999998e-09"
+2022-03-04T18:09:24.823 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:09:24.txt"
+2022-03-04 13:09:25.499Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:09:28.289 hx_n8 i text="cb ramp=1 group=1 read=11 image=True outputReset=True"
+2022-03-04T18:09:28.858 hx_n8 i text="adding to ramp FITS file at group=1 read=11 reset=False shape=(4096, 4096) ref=(4096, 4096), med=43823.0"
+2022-03-04T18:09:25.521 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:09:29.831 idg i text="chan 1: 2.149392e-13"
+2022-03-04T18:09:29.832 idg i text="chan 2: -2.4780285e-09"
+2022-03-04T18:09:29.851 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:09:29.txt"
+2022-03-04 13:09:30.528Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:09:30.550 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:09:34.858 idg i text="chan 1: 2.23821e-13"
+2022-03-04T18:09:34.860 idg i text="chan 2: -2.477659e-09"
+2022-03-04T18:09:34.878 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:09:34.txt"
+2022-03-04 13:09:35.564Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:09:39.249 hx_n8 i text="cb ramp=1 group=1 read=12 image=True outputReset=True"
+2022-03-04T18:09:35.586 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:09:39.895 idg i text="chan 1: 2.184919e-13"
+2022-03-04T18:09:39.897 idg i text="chan 2: -2.4799755e-09"
+2022-03-04T18:09:39.917 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:09:39.txt"
+2022-03-04T18:09:40.027 hx_n8 i text="adding to ramp FITS file at group=1 read=12 reset=False shape=(4096, 4096) ref=(4096, 4096), med=45628.0"
+2022-03-04 13:09:40.602Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:09:44.055 hx_n8 i hxread=47551,1,1,11
+2022-03-04T18:09:40.624 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:09:44.932 idg i text="chan 1: 2.184919e-13"
+2022-03-04T18:09:44.934 idg i text="chan 2: -2.48199e-09"
+2022-03-04T18:09:44.954 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:09:44.txt"
+2022-03-04 13:09:45.636Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:09:45.890 hx_n8 i hxread=47551,1,1,12
+2022-03-04T18:09:45.657 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:09:49.966 idg i text="chan 1: 2.23821e-13"
+2022-03-04T18:09:49.969 idg i text="chan 2: -2.4859045e-09"
+2022-03-04T18:09:49.989 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:09:49.txt"
+2022-03-04T18:09:50.128 hx_n8 i text="cb ramp=1 group=1 read=13 image=True outputReset=True"
+2022-03-04 13:09:50.678Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:09:50.751 hx_n8 i text="adding to ramp FITS file at group=1 read=13 reset=False shape=(4096, 4096) ref=(4096, 4096), med=46784.0"
+2022-03-04T18:09:51.790 hx_n8 i hxread=47551,1,1,13
+2022-03-04T18:09:50.699 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:09:55.009 idg i text="chan 1: 2.167155e-13"
+2022-03-04T18:09:55.010 idg i text="chan 2: -2.4834715e-09"
+2022-03-04T18:09:55.029 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:09:54.txt"
+2022-03-04 13:09:55.710Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:09:55.732 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:10:00.042 idg i text="chan 1: 2.2026825e-13"
+2022-03-04T18:10:00.043 idg i text="chan 2: -2.4917565000000002e-09"
+2022-03-04T18:10:00.064 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:10:00.txt"
+2022-03-04 13:10:00.768Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:10:01.044 hx_n8 i text="cb ramp=1 group=1 read=14 image=True outputReset=True"
+2022-03-04T18:10:01.494 hx_n8 i text="adding to ramp FITS file at group=1 read=14 reset=False shape=(4096, 4096) ref=(4096, 4096), med=47454.0"
+2022-03-04T18:10:00.790 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:10:05.097 idg i text="chan 1: 2.184919e-13"
+2022-03-04T18:10:05.098 idg i text="chan 2: -2.4904485e-09"
+2022-03-04T18:10:05.120 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:10:05.txt"
+2022-03-04 13:10:05.804Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:10:05.825 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:10:10.133 idg i text="chan 1: 2.096101e-13"
+2022-03-04T18:10:10.136 idg i text="chan 2: -2.4924435e-09"
+2022-03-04T18:10:10.156 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:10:10.txt"
+2022-03-04 13:10:10.844Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:10:12.077 hx_n8 i text="cb ramp=1 group=1 read=15 image=True outputReset=True"
+2022-03-04T18:10:12.801 hx_n8 i text="adding to ramp FITS file at group=1 read=15 reset=False shape=(4096, 4096) ref=(4096, 4096), med=47774.0"
+2022-03-04T18:10:10.866 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:10:15.174 idg i text="chan 1: 2.184919e-13"
+2022-03-04T18:10:15.176 idg i text="chan 2: -2.494213e-09"
+2022-03-04T18:10:15.196 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:10:15.txt"
+2022-03-04 13:10:15.886Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:10:17.103 hx_n8 i hxread=47551,1,1,14
+2022-03-04T18:10:19.051 hx_n8 i hxread=47551,1,1,15
+2022-03-04T18:10:15.907 sent idg n8pds meas name=h4run_1300_1_1300_950 wave=1300 power=950 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:10:20.218 idg i text="chan 1: 2.149392e-13"
+2022-03-04T18:10:20.219 idg i text="chan 2: -2.4928180000000003e-09"
+2022-03-04T18:10:20.239 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_2022-03-04T13:10:20.txt"
+off Namespace(off=True, on=None, status=False)
+OK 0 2 0
+2022-03-04 13:10:22.118Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:10:22.952 hx_n8 i text="cb ramp=1 group=1 read=16 image=True outputReset=True"
+2022-03-04T18:10:23.568 hx_n8 i text="adding to ramp FITS file at group=1 read=16 reset=False shape=(4096, 4096) ref=(4096, 4096), med=47962.0"
+2022-03-04T18:10:24.564 hx_n8 i hxread=47551,1,1,16
+2022-03-04T18:10:22.139 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:10:26.533 idg i text="chan 1: 2.1760370000000002e-13"
+2022-03-04T18:10:26.534 idg i text="chan 2: -2.702727e-12"
+2022-03-04T18:10:26.554 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:10:26.txt"
+2022-03-04 13:10:27.229Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:10:27.251 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:10:31.603 idg i text="chan 1: 2.149392e-13"
+2022-03-04T18:10:31.606 idg i text="chan 2: -2.729372e-12"
+2022-03-04T18:10:31.625 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:10:31.txt"
+2022-03-04 13:10:32.301Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:10:33.908 hx_n8 i text="cb ramp=1 group=1 read=17 image=True outputReset=True"
+2022-03-04T18:10:34.497 hx_n8 i text="adding to ramp FITS file at group=1 read=17 reset=False shape=(4096, 4096) ref=(4096, 4096), med=47964.0"
+2022-03-04T18:10:35.499 hx_n8 i hxread=47551,1,1,17
+2022-03-04T18:10:32.323 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:10:36.678 idg i text="chan 1: 2.104983e-13"
+2022-03-04T18:10:36.679 idg i text="chan 2: -2.7835515e-12"
+2022-03-04T18:10:36.697 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:10:36.txt"
+2022-03-04 13:10:37.379Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:10:37.400 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:10:41.752 idg i text="chan 1: 2.113865e-13"
+2022-03-04T18:10:41.753 idg i text="chan 2: -2.742695e-12"
+2022-03-04T18:10:41.774 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:10:41.txt"
+2022-03-04 13:10:42.451Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:10:44.854 hx_n8 i text="cb ramp=1 group=1 read=18 image=True outputReset=True"
+2022-03-04T18:10:45.497 hx_n8 i text="adding to ramp FITS file at group=1 read=18 reset=False shape=(4096, 4096) ref=(4096, 4096), med=47935.0"
+2022-03-04T18:10:42.472 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:10:46.823 idg i text="chan 1: 2.220446e-13"
+2022-03-04T18:10:46.824 idg i text="chan 2: -2.708056e-12"
+2022-03-04T18:10:46.846 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:10:46.txt"
+2022-03-04 13:10:47.524Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:10:51.122 hx_n8 i hxread=47551,1,1,18
+2022-03-04T18:10:47.546 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:10:51.897 idg i text="chan 1: 2.1316285e-13"
+2022-03-04T18:10:51.900 idg i text="chan 2: -2.732037e-12"
+2022-03-04T18:10:51.920 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:10:51.txt"
+2022-03-04 13:10:52.599Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:10:55.829 hx_n8 i text="cb ramp=1 group=1 read=19 image=True outputReset=True"
+2022-03-04T18:10:55.839 hx_n8 w text="failed to get lamp info for optics lab"
+2022-03-04T18:10:56.395 hx_n8 i text="adding to ramp FITS file at group=1 read=19 reset=False shape=(4096, 4096) ref=(4096, 4096), med=47992.0"
+2022-03-04T18:10:52.621 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:10:56.976 idg i text="chan 1: 2.1760370000000002e-13"
+2022-03-04T18:10:56.977 idg i text="chan 2: -2.7400305e-12"
+2022-03-04T18:10:56.997 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:10:56.txt"
+2022-03-04T18:10:57.399 hx_n8 i hxread=47551,1,1,19
+2022-03-04 13:10:57.683Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:10:57.707 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:11:02.058 idg i text="chan 1: 2.1316285e-13"
+2022-03-04T18:11:02.062 idg i text="chan 2: -2.7382540000000003e-12"
+2022-03-04T18:11:02.083 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:11:02.txt"
+2022-03-04 13:11:02.759Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:11:06.726 hx_n8 i text="cb ramp=1 group=1 read=20 image=True outputReset=True"
+2022-03-04T18:11:02.780 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:11:07.133 idg i text="chan 1: 2.184919e-13"
+2022-03-04T18:11:07.136 idg i text="chan 2: -2.7737815e-12"
+2022-03-04T18:11:07.156 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:11:07.txt"
+2022-03-04T18:11:07.305 hx_n8 i text="adding to ramp FITS file at group=1 read=20 reset=False shape=(4096, 4096) ref=(4096, 4096), med=47968.0"
+2022-03-04T18:11:07.503 hx_n8 i text="acquisition done; waiting for files to be closed."
+2022-03-04T18:11:07.503 hx_n8 i text="1 ramps, elapsed=233.919, perRamp=233.919, perRead=11.139"
+2022-03-04 13:11:07.843Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:11:08.383 hx_n8 i hxread=47551,1,1,20
+2022-03-04T18:11:07.865 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:11:12.219 idg i text="chan 1: 2.096101e-13"
+2022-03-04T18:11:12.220 idg i text="chan 2: -2.747136e-12"
+2022-03-04T18:11:12.238 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:11:12.txt"
+2022-03-04 13:11:12.911Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:11:12.933 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:11:17.285 idg i text="chan 1: 2.2115645e-13"
+2022-03-04T18:11:17.287 idg i text="chan 2: -2.727596e-12"
+2022-03-04T18:11:17.308 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:11:17.txt"
+2022-03-04 13:11:17.995Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:11:18.018 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:11:22.370 idg i text="chan 1: 2.0872195e-13"
+2022-03-04T18:11:22.371 idg i text="chan 2: -2.7489125e-12"
+2022-03-04T18:11:22.392 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:11:22.txt"
+2022-03-04 13:11:23.071Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:11:25.496 hx_n8 i filename="/data/ramps/2022-03-04/PFJB04755183.fits"
+2022-03-04T18:11:25.524 hx_n8 : text="1 ramps, elapsed=251.940, perRamp=251.940, perRead=11.997"
+2022-03-04 13:11:26.208Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:11:26.232 sent hx_n8 ramp nread=20 exptype=flat objname=h4run_1300_1_led1300 (from cloomis_tron)
+2022-03-04T18:11:26.256 hx_n8 w text="rowSequence NO override: (48958, 4696, 8774, 10, 4096) vs [8192 4096]"
+2022-03-04T18:11:26.271 hx_n8 i text="lamp 0=0"
+2022-03-04T18:11:26.275 hx_n8 i text="configuring ramp..."
+2022-03-04T18:11:26.276 hx_n8 i ramp=1,1,1,20,0
+2022-03-04T18:11:23.093 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:11:27.446 idg i text="chan 1: 2.184919e-13"
+2022-03-04T18:11:27.446 idg i text="chan 2: -2.768452e-12"
+2022-03-04T18:11:27.464 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:11:27.txt"
+2022-03-04 13:11:28.183Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:11:28.386 hx_n8 i text="cb ramp=0 group=0 read=0 image=False outputReset=True"
+2022-03-04T18:11:28.388 hx_n8 i text="DAQ output start"
+2022-03-04T18:11:28.393 hx_n8 i readtimes=1646417488.387,1646417499.244,10.857
+2022-03-04T18:11:28.205 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:11:32.556 idg i text="chan 1: 2.184919e-13"
+2022-03-04T18:11:32.558 idg i text="chan 2: -2.755129e-12"
+2022-03-04T18:11:32.576 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:11:32.txt"
+2022-03-04 13:11:33.262Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:11:33.283 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:11:37.635 idg i text="chan 1: 2.096101e-13"
+2022-03-04T18:11:37.637 idg i text="chan 2: -2.7533530000000003e-12"
+2022-03-04T18:11:37.659 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:11:37.txt"
+2022-03-04 13:11:38.356Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:11:39.581 hx_n8 i text="cb ramp=1 group=0 read=1 image=True outputReset=True"
+2022-03-04T18:11:39.582 hx_n8 i text="creating FITS files at group=0 read=1"
+2022-03-04T18:11:39.805 hx_n8 i text="created /data/ramps/2022-03-04/PFJB04755283.fits"
+2022-03-04T18:11:40.345 hx_n8 i text="adding to ramp FITS file at group=0 read=1 reset=True shape=(4096, 4096) ref=(4096, 4096), med=12710.0"
+2022-03-04T18:11:41.339 hx_n8 i hxread=47552,1,0,1
+2022-03-04T18:11:38.378 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:11:42.730 idg i text="chan 1: 2.1316285e-13"
+2022-03-04T18:11:42.733 idg i text="chan 2: -2.7604585e-12"
+2022-03-04T18:11:42.752 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:11:42.txt"
+2022-03-04 13:11:43.474Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:11:43.497 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:11:47.851 idg i text="chan 1: 2.096101e-13"
+2022-03-04T18:11:47.852 idg i text="chan 2: -2.7355895e-12"
+2022-03-04T18:11:47.876 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:11:47.txt"
+2022-03-04 13:11:48.568Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:11:50.551 hx_n8 i text="cb ramp=1 group=1 read=1 image=True outputReset=True"
+2022-03-04T18:11:51.229 hx_n8 i text="adding to ramp FITS file at group=1 read=1 reset=False shape=(4096, 4096) ref=(4096, 4096), med=12771.0"
+2022-03-04T18:11:52.261 hx_n8 i hxread=47552,1,1,1
+2022-03-04T18:11:48.590 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:11:52.944 idg i text="chan 1: 2.1227465000000002e-13"
+2022-03-04T18:11:52.945 idg i text="chan 2: -2.7515765e-12"
+2022-03-04T18:11:52.967 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:11:52.txt"
+2022-03-04 13:11:53.650Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:11:53.671 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:11:58.022 idg i text="chan 1: 2.167155e-13"
+2022-03-04T18:11:58.025 idg i text="chan 2: -2.742695e-12"
+2022-03-04T18:11:58.045 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:11:58.txt"
+2022-03-04 13:11:58.746Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:12:01.523 hx_n8 i text="cb ramp=1 group=1 read=2 image=True outputReset=True"
+2022-03-04T18:12:02.155 hx_n8 i text="adding to ramp FITS file at group=1 read=2 reset=False shape=(4096, 4096) ref=(4096, 4096), med=12791.0"
+2022-03-04T18:11:58.768 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:12:03.123 idg i text="chan 1: 2.184919e-13"
+2022-03-04T18:12:03.124 idg i text="chan 2: -2.7320365e-12"
+2022-03-04T18:12:03.144 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:12:03.txt"
+2022-03-04 13:12:03.840Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:12:03.861 hx_n8 i hxread=47552,1,1,2
+2022-03-04T18:12:03.862 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:12:08.216 idg i text="chan 1: 2.078338e-13"
+2022-03-04T18:12:08.217 idg i text="chan 2: -2.7489125e-12"
+2022-03-04T18:12:08.237 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:12:08.txt"
+2022-03-04 13:12:08.932Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:12:12.399 hx_n8 i text="cb ramp=1 group=1 read=3 image=True outputReset=True"
+2022-03-04T18:12:13.067 hx_n8 i text="adding to ramp FITS file at group=1 read=3 reset=False shape=(4096, 4096) ref=(4096, 4096), med=12843.0"
+2022-03-04T18:12:08.953 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:12:13.306 idg i text="chan 1: 2.184919e-13"
+2022-03-04T18:12:13.307 idg i text="chan 2: -2.757794e-12"
+2022-03-04T18:12:13.328 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:12:13.txt"
+2022-03-04 13:12:14.018Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:12:14.109 hx_n8 i hxread=47552,1,1,3
+2022-03-04T18:12:14.040 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:12:18.394 idg i text="chan 1: 2.184919e-13"
+2022-03-04T18:12:18.396 idg i text="chan 2: -2.736478e-12"
+2022-03-04T18:12:18.415 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:12:18.txt"
+2022-03-04 13:12:19.119Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:12:23.295 hx_n8 i text="cb ramp=1 group=1 read=4 image=True outputReset=True"
+2022-03-04T18:12:19.145 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:12:23.498 idg i text="chan 1: 2.096101e-13"
+2022-03-04T18:12:23.499 idg i text="chan 2: -2.710721e-12"
+2022-03-04T18:12:23.521 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:12:23.txt"
+2022-03-04T18:12:23.903 hx_n8 i text="adding to ramp FITS file at group=1 read=4 reset=False shape=(4096, 4096) ref=(4096, 4096), med=12868.0"
+2022-03-04 13:12:24.211Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:12:24.232 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:12:28.583 idg i text="chan 1: 2.184919e-13"
+2022-03-04T18:12:28.585 idg i text="chan 2: -2.687628e-12"
+2022-03-04T18:12:28.607 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:12:28.txt"
+2022-03-04 13:12:29.309Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:12:29.331 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:12:33.687 idg i text="chan 1: 2.184919e-13"
+2022-03-04T18:12:33.688 idg i text="chan 2: -2.768452e-12"
+2022-03-04T18:12:33.707 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:12:33.txt"
+2022-03-04T18:12:34.326 hx_n8 i text="cb ramp=1 group=1 read=5 image=True outputReset=True"
+2022-03-04 13:12:34.398Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:12:35.169 hx_n8 i text="adding to ramp FITS file at group=1 read=5 reset=False shape=(4096, 4096) ref=(4096, 4096), med=12916.0"
+2022-03-04T18:12:36.569 hx_n8 i hxread=47552,1,1,4
+2022-03-04T18:12:38.468 hx_n8 i hxread=47552,1,1,5
+2022-03-04T18:12:34.419 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:12:38.770 idg i text="chan 1: 2.184919e-13"
+2022-03-04T18:12:38.773 idg i text="chan 2: -2.732037e-12"
+2022-03-04T18:12:38.794 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:12:38.txt"
+2022-03-04 13:12:39.503Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:12:39.524 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:12:43.877 idg i text="chan 1: 2.096101e-13"
+2022-03-04T18:12:43.895 idg i text="chan 2: -2.7311485e-12"
+2022-03-04T18:12:43.896 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:12:43.txt"
+2022-03-04 13:12:44.590Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:12:45.212 hx_n8 i text="cb ramp=1 group=1 read=6 image=True outputReset=True"
+2022-03-04T18:12:45.827 hx_n8 i text="adding to ramp FITS file at group=1 read=6 reset=False shape=(4096, 4096) ref=(4096, 4096), med=12953.0"
+2022-03-04T18:12:46.859 hx_n8 i hxread=47552,1,1,6
+2022-03-04T18:12:44.612 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:12:48.966 idg i text="chan 1: 2.149392e-13"
+2022-03-04T18:12:48.968 idg i text="chan 2: -2.733813e-12"
+2022-03-04T18:12:48.990 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:12:48.txt"
+2022-03-04 13:12:49.696Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:12:49.717 sent idg n8pds meas name=h4run_1300_1_1300_950_dark wave=1300 power=0 nread=100 note='h4run_1300_1' (from cloomis_tron)
+2022-03-04T18:12:54.069 idg i text="chan 1: 2.1760370000000002e-13"
+2022-03-04T18:12:54.070 idg i text="chan 2: -2.742695e-12"
+2022-03-04T18:12:54.092 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_1300_1_1300_950_dark_2022-03-04T13:12:54.txt"
+2022-03-04 13:12:54.808Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:12:56.142 hx_n8 i text="cb ramp=1 group=1 read=7 image=True outputReset=True"
+2022-03-04T18:12:56.749 hx_n8 i text="adding to ramp FITS file at group=1 read=7 reset=False shape=(4096, 4096) ref=(4096, 4096), med=12975.0"
+2022-03-04T18:13:07.125 hx_n8 i text="cb ramp=1 group=1 read=8 image=True outputReset=True"
+2022-03-04T18:13:07.805 hx_n8 i text="adding to ramp FITS file at group=1 read=8 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13012.0"
+2022-03-04T18:13:12.928 hx_n8 i hxread=47552,1,1,7
+2022-03-04T18:13:14.732 hx_n8 i hxread=47552,1,1,8
+2022-03-04T18:13:18.062 hx_n8 i text="cb ramp=1 group=1 read=9 image=True outputReset=True"
+2022-03-04T18:13:18.721 hx_n8 i text="adding to ramp FITS file at group=1 read=9 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13045.0"
+2022-03-04T18:13:19.854 hx_n8 i hxread=47552,1,1,9
+2022-03-04T18:13:28.985 hx_n8 i text="cb ramp=1 group=1 read=10 image=True outputReset=True"
+2022-03-04T18:13:29.688 hx_n8 i text="adding to ramp FITS file at group=1 read=10 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13087.0"
+2022-03-04T18:13:30.736 hx_n8 i hxread=47552,1,1,10
+2022-03-04T18:13:39.987 hx_n8 i text="cb ramp=1 group=1 read=11 image=True outputReset=True"
+2022-03-04T18:13:40.666 hx_n8 i text="adding to ramp FITS file at group=1 read=11 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13111.0"
+2022-03-04T18:13:46.638 hx_n8 i hxread=47552,1,1,11
+2022-03-04T18:13:50.880 hx_n8 i text="cb ramp=1 group=1 read=12 image=True outputReset=True"
+2022-03-04T18:13:51.527 hx_n8 i text="adding to ramp FITS file at group=1 read=12 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13145.0"
+2022-03-04T18:13:52.552 hx_n8 i hxread=47552,1,1,12
+2022-03-04T18:14:01.777 hx_n8 i text="cb ramp=1 group=1 read=13 image=True outputReset=True"
+2022-03-04T18:14:02.322 hx_n8 i text="adding to ramp FITS file at group=1 read=13 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13179.0"
+2022-03-04T18:14:03.362 hx_n8 i hxread=47552,1,1,13
+2022-03-04T18:14:12.757 hx_n8 i text="cb ramp=1 group=1 read=14 image=True outputReset=True"
+2022-03-04T18:14:13.451 hx_n8 i text="adding to ramp FITS file at group=1 read=14 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13204.0"
+2022-03-04T18:14:20.388 hx_n8 i hxread=47552,1,1,14
+2022-03-04T18:14:23.697 hx_n8 i text="cb ramp=1 group=1 read=15 image=True outputReset=True"
+2022-03-04T18:14:24.322 hx_n8 i text="adding to ramp FITS file at group=1 read=15 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13238.0"
+2022-03-04T18:14:25.374 hx_n8 i hxread=47552,1,1,15
+2022-03-04T18:14:34.673 hx_n8 i text="cb ramp=1 group=1 read=16 image=True outputReset=True"
+2022-03-04T18:14:35.274 hx_n8 i text="adding to ramp FITS file at group=1 read=16 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13269.0"
+2022-03-04T18:14:36.307 hx_n8 i hxread=47552,1,1,16
+2022-03-04T18:14:45.559 hx_n8 i text="cb ramp=1 group=1 read=17 image=True outputReset=True"
+2022-03-04T18:14:46.109 hx_n8 i text="adding to ramp FITS file at group=1 read=17 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13308.0"
+2022-03-04T18:14:56.578 hx_n8 i text="cb ramp=1 group=1 read=18 image=True outputReset=True"
+2022-03-04T18:14:57.258 hx_n8 i text="adding to ramp FITS file at group=1 read=18 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13326.0"
+2022-03-04T18:15:00.586 hx_n8 i hxread=47552,1,1,17
+2022-03-04T18:15:02.396 hx_n8 i hxread=47552,1,1,18
+2022-03-04T18:15:07.445 hx_n8 i text="cb ramp=1 group=1 read=19 image=True outputReset=True"
+2022-03-04T18:15:07.455 hx_n8 w text="failed to get lamp info for optics lab"
+2022-03-04T18:15:08.220 hx_n8 i text="adding to ramp FITS file at group=1 read=19 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13359.0"
+2022-03-04T18:15:09.359 hx_n8 i hxread=47552,1,1,19
+2022-03-04T18:15:18.445 hx_n8 i text="cb ramp=1 group=1 read=20 image=True outputReset=True"
+2022-03-04T18:15:19.239 hx_n8 i text="adding to ramp FITS file at group=1 read=20 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13388.0"
+2022-03-04T18:15:19.436 hx_n8 i text="acquisition done; waiting for files to be closed."
+2022-03-04T18:15:19.438 hx_n8 i text="1 ramps, elapsed=233.160, perRamp=233.160, perRead=11.103"
+2022-03-04T18:15:35.213 hx_n8 i hxread=47552,1,1,20
+2022-03-04T18:15:38.969 hx_n8 i filename="/data/ramps/2022-03-04/PFJB04755283.fits"
+2022-03-04T18:15:39.468 hx_n8 : text="1 ramps, elapsed=253.186, perRamp=253.186, perRead=12.056"
+2022-03-04T18:12:54.829 sent hx_n8 ramp nread=20 exptype=dark objname=h4run_1300_1 (from cloomis_tron)
+2022-03-04T18:15:39.481 hx_n8 w text="rowSequence NO override: (48958, 4696, 8774, 10, 4096) vs [8192 4096]"
+2022-03-04T18:15:39.496 hx_n8 i text="lamp 0=0"
+2022-03-04T18:15:39.499 hx_n8 i text="configuring ramp..."
+2022-03-04T18:15:39.502 hx_n8 i ramp=1,1,1,20,0
+2022-03-04T18:15:40.097 hx_n8 i text="cb ramp=0 group=0 read=0 image=False outputReset=True"
+2022-03-04T18:15:40.098 hx_n8 i text="DAQ output start"
+2022-03-04T18:15:40.104 hx_n8 i readtimes=1646417740.098,1646417750.955,10.857
+2022-03-04T18:15:51.248 hx_n8 i text="cb ramp=1 group=0 read=1 image=True outputReset=True"
+2022-03-04T18:15:51.249 hx_n8 i text="creating FITS files at group=0 read=1"
+2022-03-04T18:15:51.470 hx_n8 i text="created /data/ramps/2022-03-04/PFJB04755383.fits"
+2022-03-04T18:15:52.061 hx_n8 i text="adding to ramp FITS file at group=0 read=1 reset=True shape=(4096, 4096) ref=(4096, 4096), med=12720.0"
+2022-03-04T18:15:53.062 hx_n8 i hxread=47553,1,0,1
+2022-03-04T18:16:02.165 hx_n8 i text="cb ramp=1 group=1 read=1 image=True outputReset=True"
+2022-03-04T18:16:02.789 hx_n8 i text="adding to ramp FITS file at group=1 read=1 reset=False shape=(4096, 4096) ref=(4096, 4096), med=12752.0"
+2022-03-04T18:16:03.834 hx_n8 i hxread=47553,1,1,1
+2022-03-04T18:16:13.150 hx_n8 i text="cb ramp=1 group=1 read=2 image=True outputReset=True"
+2022-03-04T18:16:13.770 hx_n8 i text="adding to ramp FITS file at group=1 read=2 reset=False shape=(4096, 4096) ref=(4096, 4096), med=12780.0"
+2022-03-04T18:16:17.667 hx_n8 i hxread=47553,1,1,2
+2022-03-04T18:16:24.134 hx_n8 i text="cb ramp=1 group=1 read=3 image=True outputReset=True"
+2022-03-04T18:16:24.818 hx_n8 i text="adding to ramp FITS file at group=1 read=3 reset=False shape=(4096, 4096) ref=(4096, 4096), med=12825.0"
+2022-03-04T18:16:26.428 hx_n8 i hxread=47553,1,1,3
+2022-03-04T18:16:34.992 hx_n8 i text="cb ramp=1 group=1 read=4 image=True outputReset=True"
+2022-03-04T18:16:35.720 hx_n8 i text="adding to ramp FITS file at group=1 read=4 reset=False shape=(4096, 4096) ref=(4096, 4096), med=12846.0"
+2022-03-04T18:16:36.751 hx_n8 i hxread=47553,1,1,4
+2022-03-04T18:16:45.968 hx_n8 i text="cb ramp=1 group=1 read=5 image=True outputReset=True"
+2022-03-04T18:16:46.591 hx_n8 i text="adding to ramp FITS file at group=1 read=5 reset=False shape=(4096, 4096) ref=(4096, 4096), med=12867.0"
+2022-03-04T18:16:47.645 hx_n8 i hxread=47553,1,1,5
+2022-03-04T18:16:56.921 hx_n8 i text="cb ramp=1 group=1 read=6 image=True outputReset=True"
+2022-03-04T18:16:57.510 hx_n8 i text="adding to ramp FITS file at group=1 read=6 reset=False shape=(4096, 4096) ref=(4096, 4096), med=12885.0"
+2022-03-04T18:16:58.643 hx_n8 i hxread=47553,1,1,6
+2022-03-04T18:17:07.852 hx_n8 i text="cb ramp=1 group=1 read=7 image=True outputReset=True"
+2022-03-04T18:17:08.559 hx_n8 i text="adding to ramp FITS file at group=1 read=7 reset=False shape=(4096, 4096) ref=(4096, 4096), med=12934.0"
+2022-03-04T18:17:12.785 hx_n8 i hxread=47553,1,1,7
+2022-03-04T18:17:18.738 hx_n8 i text="cb ramp=1 group=1 read=8 image=True outputReset=True"
+2022-03-04T18:17:19.364 hx_n8 i text="adding to ramp FITS file at group=1 read=8 reset=False shape=(4096, 4096) ref=(4096, 4096), med=12950.0"
+2022-03-04T18:17:20.391 hx_n8 i hxread=47553,1,1,8
+2022-03-04T18:17:29.747 hx_n8 i text="cb ramp=1 group=1 read=9 image=True outputReset=True"
+2022-03-04T18:17:30.327 hx_n8 i text="adding to ramp FITS file at group=1 read=9 reset=False shape=(4096, 4096) ref=(4096, 4096), med=12975.0"
+2022-03-04T18:17:31.358 hx_n8 i hxread=47553,1,1,9
+2022-03-04T18:17:40.687 hx_n8 i text="cb ramp=1 group=1 read=10 image=True outputReset=True"
+2022-03-04T18:17:41.467 hx_n8 i text="adding to ramp FITS file at group=1 read=10 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13002.0"
+2022-03-04T18:17:48.485 hx_n8 i hxread=47553,1,1,10
+2022-03-04T18:17:51.579 hx_n8 i text="cb ramp=1 group=1 read=11 image=True outputReset=True"
+2022-03-04T18:17:52.200 hx_n8 i text="adding to ramp FITS file at group=1 read=11 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13026.0"
+2022-03-04T18:17:53.236 hx_n8 i hxread=47553,1,1,11
+2022-03-04T18:18:02.486 hx_n8 i text="cb ramp=1 group=1 read=12 image=True outputReset=True"
+2022-03-04T18:18:03.009 hx_n8 i text="adding to ramp FITS file at group=1 read=12 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13068.0"
+2022-03-04T18:18:04.038 hx_n8 i hxread=47553,1,1,12
+2022-03-04T18:18:13.461 hx_n8 i text="cb ramp=1 group=1 read=13 image=True outputReset=True"
+2022-03-04T18:18:14.122 hx_n8 i text="adding to ramp FITS file at group=1 read=13 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13089.0"
+2022-03-04T18:18:24.457 hx_n8 i text="cb ramp=1 group=1 read=14 image=True outputReset=True"
+2022-03-04T18:18:25.248 hx_n8 i text="adding to ramp FITS file at group=1 read=14 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13117.0"
+2022-03-04T18:18:28.774 hx_n8 i hxread=47553,1,1,13
+2022-03-04T18:18:30.715 hx_n8 i hxread=47553,1,1,14
+2022-03-04T18:18:35.359 hx_n8 i text="cb ramp=1 group=1 read=15 image=True outputReset=True"
+2022-03-04T18:18:35.852 hx_n8 i text="adding to ramp FITS file at group=1 read=15 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13147.0"
+2022-03-04T18:18:36.897 hx_n8 i hxread=47553,1,1,15
+2022-03-04T18:18:46.339 hx_n8 i text="cb ramp=1 group=1 read=16 image=True outputReset=True"
+2022-03-04T18:18:47.045 hx_n8 i text="adding to ramp FITS file at group=1 read=16 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13179.0"
+2022-03-04T18:18:57.263 hx_n8 i text="cb ramp=1 group=1 read=17 image=True outputReset=True"
+2022-03-04T18:18:57.939 hx_n8 i text="adding to ramp FITS file at group=1 read=17 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13219.0"
+2022-03-04T18:19:02.169 hx_n8 i hxread=47553,1,1,16
+2022-03-04T18:19:03.998 hx_n8 i hxread=47553,1,1,17
+2022-03-04T18:19:08.182 hx_n8 i text="cb ramp=1 group=1 read=18 image=True outputReset=True"
+2022-03-04T18:19:08.669 hx_n8 i text="adding to ramp FITS file at group=1 read=18 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13224.0"
+2022-03-04T18:19:09.816 hx_n8 i hxread=47553,1,1,18
+2022-03-04T18:19:19.132 hx_n8 i text="cb ramp=1 group=1 read=19 image=True outputReset=True"
+2022-03-04T18:19:19.143 hx_n8 w text="failed to get lamp info for optics lab"
+2022-03-04T18:19:19.747 hx_n8 i text="adding to ramp FITS file at group=1 read=19 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13250.0"
+2022-03-04T18:19:30.109 hx_n8 i text="cb ramp=1 group=1 read=20 image=True outputReset=True"
+2022-03-04T18:19:30.757 hx_n8 i text="adding to ramp FITS file at group=1 read=20 reset=False shape=(4096, 4096) ref=(4096, 4096), med=13280.0"
+2022-03-04T18:19:30.917 hx_n8 i text="acquisition done; waiting for files to be closed."
+2022-03-04T18:19:30.927 hx_n8 i text="1 ramps, elapsed=231.404, perRamp=231.404, perRead=11.019"
+2022-03-04T18:19:35.389 hx_n8 i hxread=47553,1,1,19
+2022-03-04T18:19:37.126 hx_n8 i hxread=47553,1,1,20
+2022-03-04T18:19:44.949 hx_n8 i filename="/data/ramps/2022-03-04/PFJB04755383.fits"
+2022-03-04T18:19:45.440 hx_n8 : text="1 ramps, elapsed=245.936, perRamp=245.936, perRead=11.711"

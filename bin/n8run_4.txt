@@ -1,0 +1,303 @@
+nohup: ignoring input
+args: name=h4run_4_940_990 wave=940 led=1 power=990 nread=100 ngroups=100 ndarks=100 note=h4run_4
+2022-03-04 13:53:39.772Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:53:39.801 sent idg n8pds meas name=h4run_4_940_990_predark wave=940 power=0 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:53:44.175 idg i text="chan 1: 2.069456e-13"
+2022-03-04T18:53:44.179 idg i text="chan 2: -2.2293275e-12"
+2022-03-04T18:53:44.203 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_predark_2022-03-04T13:53:44.txt"
+on 1 990 Namespace(off=False, on=[1, 990], status=False)
+OK 1 1 990
+2022-03-04 13:55:45.144Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04 13:55:45.151Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:55:45.174 sent ramp exptype=flat nread=15 objname=h4run_4_940_990 (from cloomis_tron)
+2022-03-04T18:55:45.178 hub f notarget="the target named ramp is not connected"
+2022-03-04T18:55:45.165 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:55:45.179 hub f notarget="the target named ramp is not connected"
+2022-03-04 13:55:45.871Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04 13:55:45.871Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+Failed to create current.log symlink to 2022-03-04T18:55:45.871.log
+2022-03-04T18:55:45.894 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:55:45.899 hub f notarget="the target named ramp is not connected"
+2022-03-04T18:55:45.892 sent ramp exptype=flat nread=15 objname=h4run_4_940_990 (from cloomis_tron)
+2022-03-04T18:55:45.899 hub f notarget="the target named ramp is not connected"
+2022-03-04 13:55:46.601Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+Traceback (most recent call last):
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/bin/oneCmd.py", line 161, in <module>
+    main()
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/bin/oneCmd.py", line 157, in main
+    printTimes=(not opts.noTimes))
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/bin/oneCmd.py", line 45, in __init__
+    modelNames=modelNames)
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/python/actorcore/Actor.py", line 82, in __init__
+    self._reloadConfiguration()
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/python/actorcore/Actor.py", line 150, in _reloadConfiguration
+    self.configureLogs()
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/python/actorcore/Actor.py", line 166, in configureLogs
+    opsLogging.setupRootLogger(self.logDir)
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/python/opscore/utility/sdss3logging.py", line 267, in setupRootLogger
+    rootHandler = makeOpsFileHandler(basedir)
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/python/opscore/utility/sdss3logging.py", line 222, in makeOpsFileHandler
+    handler = OpsRotatingFileHandler(dirname=dirname, basename=basename)
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/python/opscore/utility/sdss3logging.py", line 87, in __init__
+    self.doRollover()
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/python/opscore/utility/sdss3logging.py", line 186, in doRollover
+    raise RuntimeError("logfile %s already exists. Would append to it." % (path))
+RuntimeError: logfile /software/mhs/logs/actors/oneCmd/2022-03-04T18:55:46.601.log already exists. Would append to it.
+2022-03-04 13:55:47.399Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:55:46.622 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:55:47.426 hub f notarget="the target named ramp is not connected"
+2022-03-04T18:55:47.422 sent ramp exptype=flat nread=15 objname=h4run_4_940_990 (from cloomis_tron)
+2022-03-04T18:55:47.426 hub f notarget="the target named ramp is not connected"
+2022-03-04 13:55:48.103Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:55:48.125 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04 13:55:59.844Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+./n8scan.sh: line 110: 11584 Quit                    oneCmd.py idg n8pds meas name=$name wave=$wave power=$power nread=$count $noteArg
+2022-03-04 13:56:01.136Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:56:01.158 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:56:11.089 idg i text="chan 1: 2.078338e-13"
+2022-03-04T18:56:11.090 idg i text="chan 2: -9.9696965e-10"
+2022-03-04T18:56:11.108 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:56:11.txt"
+2022-03-04 13:56:11.782Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:56:11.803 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:56:16.111 idg i text="chan 1: 2.1316285e-13"
+2022-03-04T18:56:16.112 idg i text="chan 2: -9.970655e-10"
+2022-03-04T18:56:16.131 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:56:16.txt"
+2022-03-04 13:56:16.807Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:56:16.833 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:56:21.138 idg i text="chan 1: 2.096101e-13"
+2022-03-04T18:56:21.141 idg i text="chan 2: -9.971064e-10"
+2022-03-04T18:56:21.161 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:56:21.txt"
+2022-03-04 13:56:21.841Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:56:21.863 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:56:26.172 idg i text="chan 1: 2.0783375e-13"
+2022-03-04T18:56:26.174 idg i text="chan 2: -9.972183499999999e-10"
+2022-03-04T18:56:26.192 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:56:26.txt"
+2022-03-04 13:56:26.876Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:56:26.898 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:56:31.205 idg i text="chan 1: 2.060574e-13"
+2022-03-04T18:56:31.206 idg i text="chan 2: -9.972165500000001e-10"
+2022-03-04T18:56:31.226 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:56:31.txt"
+2022-03-04 13:56:31.903Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:56:31.925 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:56:36.232 idg i text="chan 1: 2.016165e-13"
+2022-03-04T18:56:36.235 idg i text="chan 2: -9.973498e-10"
+2022-03-04T18:56:36.256 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:56:36.txt"
+2022-03-04 13:56:36.954Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:56:36.976 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:56:41.283 idg i text="chan 1: 2.060574e-13"
+2022-03-04T18:56:41.286 idg i text="chan 2: -9.973551e-10"
+2022-03-04T18:56:41.305 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:56:41.txt"
+2022-03-04 13:56:41.990Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:56:42.012 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:56:46.319 idg i text="chan 1: 2.060574e-13"
+2022-03-04T18:56:46.320 idg i text="chan 2: -9.974599e-10"
+2022-03-04T18:56:46.343 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:56:46.txt"
+2022-03-04 13:56:47.034Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:56:47.056 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:56:51.363 idg i text="chan 1: 2.078338e-13"
+2022-03-04T18:56:51.366 idg i text="chan 2: -9.974777e-10"
+2022-03-04T18:56:51.386 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:56:51.txt"
+2022-03-04 13:56:52.065Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:56:52.087 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:56:56.395 idg i text="chan 1: 2.096101e-13"
+2022-03-04T18:56:56.397 idg i text="chan 2: -9.97602e-10"
+2022-03-04T18:56:56.419 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:56:56.txt"
+2022-03-04 13:56:57.113Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:56:57.140 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:57:01.447 idg i text="chan 1: 2.0872195e-13"
+2022-03-04T18:57:01.450 idg i text="chan 2: -9.976375e-10"
+2022-03-04T18:57:01.468 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:57:01.txt"
+2022-03-04 13:57:02.148Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:57:02.175 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:57:06.480 idg i text="chan 1: 2.1671555000000002e-13"
+2022-03-04T18:57:06.482 idg i text="chan 2: -9.9768905e-10"
+2022-03-04T18:57:06.506 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:57:06.txt"
+2022-03-04 13:57:07.207Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:57:07.229 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:57:11.538 idg i text="chan 1: 2.184919e-13"
+2022-03-04T18:57:11.539 idg i text="chan 2: -9.977974e-10"
+2022-03-04T18:57:11.559 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:57:11.txt"
+2022-03-04 13:57:12.244Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:57:12.266 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:57:16.574 idg i text="chan 1: 2.060574e-13"
+2022-03-04T18:57:16.575 idg i text="chan 2: -9.977796500000001e-10"
+2022-03-04T18:57:16.596 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:57:16.txt"
+2022-03-04 13:57:17.301Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:57:17.327 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:57:21.637 idg i text="chan 1: 2.104983e-13"
+2022-03-04T18:57:21.638 idg i text="chan 2: -9.978187e-10"
+2022-03-04T18:57:21.657 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:57:21.txt"
+2022-03-04 13:57:22.347Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:57:22.369 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:57:26.676 idg i text="chan 1: 2.0872195e-13"
+2022-03-04T18:57:26.678 idg i text="chan 2: -9.979288500000001e-10"
+2022-03-04T18:57:26.698 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:57:26.txt"
+2022-03-04 13:57:27.411Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:57:27.433 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:57:31.740 idg i text="chan 1: 2.016165e-13"
+2022-03-04T18:57:31.742 idg i text="chan 2: -9.979502e-10"
+2022-03-04T18:57:31.765 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:57:31.txt"
+2022-03-04 13:57:32.450Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:57:32.472 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:57:36.779 idg i text="chan 1: 2.096101e-13"
+2022-03-04T18:57:36.781 idg i text="chan 2: -9.98039e-10"
+2022-03-04T18:57:36.802 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:57:36.txt"
+2022-03-04 13:57:37.549Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:57:37.575 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:57:41.883 idg i text="chan 1: 2.060574e-13"
+2022-03-04T18:57:41.884 idg i text="chan 2: -9.9805675e-10"
+2022-03-04T18:57:41.906 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:57:41.txt"
+2022-03-04 13:57:42.595Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:57:42.616 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:57:46.923 idg i text="chan 1: 2.104983e-13"
+2022-03-04T18:57:46.926 idg i text="chan 2: -9.9811e-10"
+2022-03-04T18:57:46.946 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:57:46.txt"
+2022-03-04 13:57:47.637Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:57:47.663 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:57:51.973 idg i text="chan 1: 2.149392e-13"
+2022-03-04T18:57:51.974 idg i text="chan 2: -9.981047e-10"
+2022-03-04T18:57:51.994 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:57:51.txt"
+2022-03-04 13:57:52.704Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:57:52.726 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:57:57.031 idg i text="chan 1: 2.096101e-13"
+2022-03-04T18:57:57.033 idg i text="chan 2: -9.981651e-10"
+2022-03-04T18:57:57.054 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:57:57.txt"
+2022-03-04 13:57:57.736Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:57:57.757 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:58:02.067 idg i text="chan 1: 2.096101e-13"
+2022-03-04T18:58:02.068 idg i text="chan 2: -9.981669e-10"
+2022-03-04T18:58:02.087 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:58:02.txt"
+2022-03-04 13:58:02.766Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:58:02.788 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:58:07.096 idg i text="chan 1: 1.918465e-13"
+2022-03-04T18:58:07.097 idg i text="chan 2: -9.9820065e-10"
+2022-03-04T18:58:07.115 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:58:07.txt"
+2022-03-04 13:58:07.813Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:58:07.834 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:58:12.145 idg i text="chan 1: 2.0428105000000001e-13"
+2022-03-04T18:58:12.146 idg i text="chan 2: -9.982237e-10"
+2022-03-04T18:58:12.165 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:58:12.txt"
+2022-03-04 13:58:12.842Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:58:12.869 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:58:17.176 idg i text="chan 1: 2.060574e-13"
+2022-03-04T18:58:17.178 idg i text="chan 2: -9.983125e-10"
+2022-03-04T18:58:17.199 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:58:17.txt"
+2022-03-04 13:58:17.882Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:58:17.904 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:58:22.213 idg i text="chan 1: 1.9895195e-13"
+2022-03-04T18:58:22.214 idg i text="chan 2: -9.983232e-10"
+2022-03-04T18:58:22.232 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:58:22.txt"
+2022-03-04 13:58:22.915Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:58:22.941 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:58:27.248 idg i text="chan 1: 2.167155e-13"
+2022-03-04T18:58:27.270 idg i text="chan 2: -9.984085e-10"
+2022-03-04T18:58:27.270 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:58:27.txt"
+2022-03-04 13:58:27.947Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:58:27.973 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:58:32.281 idg i text="chan 1: 2.007283e-13"
+2022-03-04T18:58:32.282 idg i text="chan 2: -9.983765e-10"
+2022-03-04T18:58:32.300 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:58:32.txt"
+2022-03-04 13:58:32.975Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:58:32.998 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:58:37.304 idg i text="chan 1: 2.025047e-13"
+2022-03-04T18:58:37.308 idg i text="chan 2: -9.9847775e-10"
+2022-03-04T18:58:37.327 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:58:37.txt"
+2022-03-04 13:58:38.009Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:58:38.031 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:58:42.339 idg i text="chan 1: 2.1316285e-13"
+2022-03-04T18:58:42.341 idg i text="chan 2: -9.9851505e-10"
+2022-03-04T18:58:42.361 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:58:42.txt"
+2022-03-04 13:58:43.038Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:58:43.060 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:58:47.370 idg i text="chan 1: 2.060574e-13"
+2022-03-04T18:58:47.371 idg i text="chan 2: -9.984724500000001e-10"
+2022-03-04T18:58:47.389 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:58:47.txt"
+2022-03-04 13:58:48.067Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:58:48.088 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:58:52.397 idg i text="chan 1: 2.149392e-13"
+2022-03-04T18:58:52.398 idg i text="chan 2: -9.984937e-10"
+2022-03-04T18:58:52.416 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:58:52.txt"
+2022-03-04 13:58:53.092Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:58:53.114 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:58:57.424 idg i text="chan 1: 2.096101e-13"
+2022-03-04T18:58:57.426 idg i text="chan 2: -9.9854525e-10"
+2022-03-04T18:58:57.444 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:58:57.txt"
+2022-03-04 13:58:58.122Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:58:58.144 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:59:02.450 idg i text="chan 1: 2.007283e-13"
+2022-03-04T18:59:02.453 idg i text="chan 2: -9.985683e-10"
+2022-03-04T18:59:02.473 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:59:02.txt"
+2022-03-04 13:59:03.150Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:59:03.172 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:59:07.480 idg i text="chan 1: 2.0339284999999998e-13"
+2022-03-04T18:59:07.481 idg i text="chan 2: -9.986181e-10"
+2022-03-04T18:59:07.500 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:59:07.txt"
+2022-03-04 13:59:08.181Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:59:08.203 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:59:12.510 idg i text="chan 1: 2.096101e-13"
+2022-03-04T18:59:12.511 idg i text="chan 2: -9.986021e-10"
+2022-03-04T18:59:12.532 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:59:12.txt"
+2022-03-04 13:59:13.210Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:59:13.232 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:59:17.538 idg i text="chan 1: 2.007283e-13"
+2022-03-04T18:59:17.542 idg i text="chan 2: -9.986856e-10"
+2022-03-04T18:59:17.561 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:59:17.txt"
+2022-03-04 13:59:18.241Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:59:18.263 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:59:22.568 idg i text="chan 1: 2.060574e-13"
+2022-03-04T18:59:22.569 idg i text="chan 2: -9.986411500000001e-10"
+2022-03-04T18:59:22.591 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:59:22.txt"
+2022-03-04 13:59:23.267Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:59:23.289 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:59:27.599 idg i text="chan 1: 2.007283e-13"
+2022-03-04T18:59:27.600 idg i text="chan 2: -9.987176e-10"
+2022-03-04T18:59:27.628 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:59:27.txt"
+2022-03-04 13:59:28.304Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:59:28.325 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:59:32.635 idg i text="chan 1: 2.0872195e-13"
+2022-03-04T18:59:32.637 idg i text="chan 2: -9.987282500000002e-10"
+2022-03-04T18:59:32.655 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:59:32.txt"
+2022-03-04 13:59:33.335Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:59:33.356 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:59:37.665 idg i text="chan 1: 2.0872195e-13"
+2022-03-04T18:59:37.666 idg i text="chan 2: -9.987495e-10"
+2022-03-04T18:59:37.686 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:59:37.txt"
+2022-03-04 13:59:38.364Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:59:38.388 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:59:42.697 idg i text="chan 1: 2.096101e-13"
+2022-03-04T18:59:42.698 idg i text="chan 2: -9.9879925e-10"
+2022-03-04T18:59:42.716 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:59:42.txt"
+2022-03-04 13:59:43.396Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:59:43.418 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:59:47.723 idg i text="chan 1: 2.096101e-13"
+2022-03-04T18:59:47.725 idg i text="chan 2: -9.987851e-10"
+2022-03-04T18:59:47.746 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:59:47.txt"
+2022-03-04 13:59:48.431Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:59:48.454 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:59:52.766 idg i text="chan 1: 2.096101e-13"
+2022-03-04T18:59:52.768 idg i text="chan 2: -9.987442e-10"
+2022-03-04T18:59:52.788 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:59:52.txt"
+2022-03-04 13:59:53.467Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:59:53.488 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T18:59:57.797 idg i text="chan 1: 2.060574e-13"
+2022-03-04T18:59:57.799 idg i text="chan 2: -9.988312e-10"
+2022-03-04T18:59:57.817 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T13:59:57.txt"
+2022-03-04 13:59:58.496Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T18:59:58.518 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T19:00:02.828 idg i text="chan 1: 1.9984015e-13"
+2022-03-04T19:00:02.829 idg i text="chan 2: -9.988579e-10"
+2022-03-04T19:00:02.849 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T14:00:02.txt"
+2022-03-04 14:00:03.541Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T19:00:03.563 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T19:00:07.872 idg i text="chan 1: 2.0872195e-13"
+2022-03-04T19:00:07.873 idg i text="chan 2: -9.989414e-10"
+2022-03-04T19:00:07.894 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T14:00:07.txt"
+2022-03-04 14:00:08.588Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T19:00:08.609 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04T19:00:12.916 idg i text="chan 1: 2.007283e-13"
+2022-03-04T19:00:12.917 idg i text="chan 2: -9.989307e-10"
+2022-03-04T19:00:12.940 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_4_940_990_2022-03-04T14:00:12.txt"
+2022-03-04 14:00:13.618Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T19:00:13.639 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
+2022-03-04 14:00:15.357Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T19:00:15.378 sent idg n8pds meas name=h4run_4_940_990 wave=940 power=990 nread=100 note='h4run_4' (from cloomis_tron)
