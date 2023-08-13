@@ -17,11 +17,14 @@ power=0
 count=15
 ngroups=1
 ndarks=1
+nramps=0
+nrampReads=15
+nrampDarkReads=50
 sleep=60
 offSleep=5
 note="note"
 
-while getopts "nlw:p:c:N:g:s:S:d:" opt; do
+while getopts "nlw:p:c:N:g:s:S:d:r:R:D:" opt; do
     case "$opt" in
         w)
             wave=${OPTARG}
@@ -49,6 +52,15 @@ while getopts "nlw:p:c:N:g:s:S:d:" opt; do
         S)
             offSleep=${OPTARG}
             ;;
+        r)
+            nramps=${OPTARG}
+            ;;
+        R)
+            nrampReads=${OPTARG}
+            ;;
+        D)
+            nrampDarkReads=${OPTARG}
+            ;;
         n)
             norun=true
             ;;
@@ -67,7 +79,7 @@ name=${name}_${wave}_${power}
 (( $power > 0 && $wave == 0 )) && usage "if wavelength is not set, then power must be 0"
 
 led=${leds[$wave]}
-echo args: name=$name wave=$wave led=$led power=$power nread=$count note="${note}"
+echo args: name=$name wave=$wave led=$led power=$power nread=$count ngroups=$ngroups ndarks=$ndarks note="${note}"
 
 test -n "$name" || usage "name required"
 
@@ -88,6 +100,13 @@ if test -n "$controlLeds"; then
     fi
 fi
 
+if test "$nramps" -gt 0; then
+    ( for i in `seq $nramps`; do
+          oneCmd.py hx_n8 ramp exptype=flat nread=${nrampReads} objname=${name}
+      done
+    ) &
+fi
+   
 for i in `seq $ngroups`; do
     oneCmd.py idg n8pds meas name=$name wave=$wave power=$power nread=$count $noteArg
 done
@@ -97,6 +116,12 @@ if test -n "$controlLeds"; then
     sleep $offSleep
 fi
 
+if test $ndarks -gt 0 -a $nrampDarkReads -gt 0; then
+    oneCmd.py hx_n8 ramp exptype=dark nread=${nrampDarkReads} objname=${name} &
+fi
+
 for i in `seq $ndarks`; do
     oneCmd.py idg n8pds meas name=${name}_dark wave=$wave power=0 nread=$count $noteArg
 done
+
+wait

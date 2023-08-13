@@ -1,0 +1,9 @@
+nohup: ignoring input
+args: name=h4run_18661_940_970 wave=940 led=1 power=970 nread=100 ngroups=640 ndarks=100 note=h4run_18661
+2023-03-24 17:56:55.946Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2023-03-24T21:56:55.964 sent idg n8pds meas name=h4run_18661_940_970_predark wave=940 power=0 nread=100 note='h4run_18661' (from cloomis_tron)
+2023-03-24T21:57:00.277 idg i text="chan 1: -1.9643395e-10"
+2023-03-24T21:57:00.278 idg i text="chan 2: -2.344791e-13"
+2023-03-24T21:57:00.311 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_18661_940_970_predark_2023-03-24T17:57:00.txt"
+on 1 970 Namespace(off=False, on=[1, 970], status=False)
+OK 1 1 970

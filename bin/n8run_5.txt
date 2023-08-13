@@ -1,0 +1,61 @@
+nohup: ignoring input
+args: name=h4run_5_940_990 wave=940 led=1 power=990 nread=100 ngroups=100 ndarks=100 note=h4run_5
+2022-03-04 14:18:39.527Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T19:18:39.548 sent idg n8pds meas name=h4run_5_940_990_predark wave=940 power=0 nread=100 note='h4run_5' (from cloomis_tron)
+2022-03-04T19:18:43.902 idg i text="chan 1: 2.149392e-13"
+2022-03-04T19:18:43.903 idg i text="chan 2: -1.7497115e-12"
+2022-03-04T19:18:43.925 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_5_940_990_predark_2022-03-04T14:18:43.txt"
+on 1 990 Namespace(off=False, on=[1, 990], status=False)
+OK 1 1 990
+2022-03-04 14:20:44.822Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04 14:20:44.834Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T19:20:44.864 sent ramp exptype=flat nread=15 objname=h4run_5_940_990 (from cloomis_tron)
+2022-03-04T19:20:44.867 hub f notarget="the target named ramp is not connected"
+2022-03-04T19:20:44.844 sent idg n8pds meas name=h4run_5_940_990 wave=940 power=990 nread=100 note='h4run_5' (from cloomis_tron)
+2022-03-04T19:20:44.867 hub f notarget="the target named ramp is not connected"
+2022-03-04 14:20:45.588Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04 14:20:45.588Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T19:20:45.609 sent idg n8pds meas name=h4run_5_940_990 wave=940 power=990 nread=100 note='h4run_5' (from cloomis_tron)
+2022-03-04T19:20:45.616 hub f notarget="the target named ramp is not connected"
+Failed to create current.log symlink to 2022-03-04T19:20:45.588.log
+2022-03-04T19:20:45.609 sent ramp exptype=flat nread=15 objname=h4run_5_940_990 (from cloomis_tron)
+2022-03-04T19:20:45.617 hub f notarget="the target named ramp is not connected"
+2022-03-04 14:20:46.307Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+Traceback (most recent call last):
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/bin/oneCmd.py", line 161, in <module>
+    main()
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/bin/oneCmd.py", line 157, in main
+    printTimes=(not opts.noTimes))
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/bin/oneCmd.py", line 45, in __init__
+    modelNames=modelNames)
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/python/actorcore/Actor.py", line 82, in __init__
+    self._reloadConfiguration()
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/python/actorcore/Actor.py", line 150, in _reloadConfiguration
+    self.configureLogs()
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/python/actorcore/Actor.py", line 166, in configureLogs
+    opsLogging.setupRootLogger(self.logDir)
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/python/opscore/utility/sdss3logging.py", line 267, in setupRootLogger
+    rootHandler = makeOpsFileHandler(basedir)
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/python/opscore/utility/sdss3logging.py", line 222, in makeOpsFileHandler
+    handler = OpsRotatingFileHandler(dirname=dirname, basename=basename)
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/python/opscore/utility/sdss3logging.py", line 87, in __init__
+    self.doRollover()
+  File "/software/mhs/products/Linux64/tron_actorcore/2.3.1/python/opscore/utility/sdss3logging.py", line 186, in doRollover
+    raise RuntimeError("logfile %s already exists. Would append to it." % (path))
+RuntimeError: logfile /software/mhs/logs/actors/oneCmd/2022-03-04T19:20:46.307.log already exists. Would append to it.
+2022-03-04 14:20:47.048Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T19:20:46.328 sent idg n8pds meas name=h4run_5_940_990 wave=940 power=990 nread=100 note='h4run_5' (from cloomis_tron)
+2022-03-04T19:20:47.075 hub f notarget="the target named ramp is not connected"
+2022-03-04T19:20:47.070 sent ramp exptype=flat nread=15 objname=h4run_5_940_990 (from cloomis_tron)
+2022-03-04T19:20:47.075 hub f notarget="the target named ramp is not connected"
+2022-03-04 14:20:47.774Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T19:20:47.796 sent idg n8pds meas name=h4run_5_940_990 wave=940 power=990 nread=100 note='h4run_5' (from cloomis_tron)
+2022-03-04T19:21:02.122 idg i text="chan 1: 2.1671555000000002e-13"
+2022-03-04T19:21:02.124 idg i text="chan 2: -1.002215e-09"
+2022-03-04T19:21:02.144 idg : text="wrote /data/pfseng/n8_photodiode/pdmeas2_h4run_5_940_990_2022-03-04T14:21:02.txt"
+python: failed to set __main__.__loader__
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap_external>", line 884, in __init__
+KeyboardInterrupt
+2022-03-04 14:21:02.870Z root             30 sdss3logging.py:284 disabling all but critical stderr output
+2022-03-04T19:21:02.892 sent idg n8pds meas name=h4run_5_940_990 wave=940 power=990 nread=100 note='h4run_5' (from cloomis_tron)
